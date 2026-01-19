@@ -46,6 +46,14 @@ public class EstoqueService {
         return repo.findAll();
     }
 
+    private List<Produto> listProductsGraterThan(Double preco) {
+        return repo.findByPrecoGreaterThan(preco);
+    }
+
+    private List<Produto> listProductsLessThan(Double preco) {
+        return repo.findByPrecoGreaterThan(preco);
+    }
+
 // Callable Methods
 
     public ProductResponse createProduct(ProductRequest request) {

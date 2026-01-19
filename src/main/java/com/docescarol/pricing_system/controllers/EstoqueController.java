@@ -28,8 +28,10 @@ public class EstoqueController {
 
     @PostMapping("/criar_produto")
     public ResponseEntity<ProductResponse> criarProduto(@RequestBody ProductRequest request) {
-         ProductResponse response = service.createProduct(request);
-         return ResponseEntity.ok(response);
+        System.out.println("REQ -> nome=" + request.getNome() +
+                " desc=" + request.getDescricao() + " preco=" + request.getPreco());
+        ProductResponse response = service.createProduct(request);
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("/listar-categoria-produtos")

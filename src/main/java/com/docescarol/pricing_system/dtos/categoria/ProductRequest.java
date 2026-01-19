@@ -1,6 +1,5 @@
 package com.docescarol.pricing_system.dtos.categoria;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,4 +29,6 @@ public class ProductRequest {
         this.nome = nome;
         this.preco = preco;
     }
+
+    public ProductRequest() {}
 }
