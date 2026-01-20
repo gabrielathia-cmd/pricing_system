@@ -5,8 +5,10 @@ document.getElementById("btn-enviar").addEventListener("click", handleCriarProdu
 function handleCriarProduto() {
     const nome = document.getElementById("produto_nome").value;
     const descricao = document.getElementById("descricao").value;
-    const preco = document.getElementById("preco").value;
+    const preco = Number(document.getElementById("preco").value);
 
+    if (!nome || !preco) { alert("Preencha nome e preço"); return;}
+    
     const produto = {
         nome: nome,
         descricao: descricao,
